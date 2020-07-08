@@ -1,0 +1,168 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    background-repeat: no-repeat;
+}
+
+:root {
+    --Dark-Blue: hsl(240, 38%, 20%);
+    --Grayish-Blue: hsl(240, 18%, 77%);
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("./images/pattern-curve.svg");
+    background-position: bottom;
+    background-size: 100% 10%;
+    .photo-container {
+        position: relative;
+        width: 250px;
+        height: 250px;
+        margin: 80px 0px;
+        box-shadow: 0px 5px 25px var(--Grayish-Blue);
+        .controls {
+            display: flex;
+            position: absolute;
+            left: 50%;
+            top: calc(100% - 20px);
+            transform: translateX(-50%);
+            width: 80px;
+            height: 40px;
+            border-radius: 50px;
+            overflow: hidden;
+            background-color: white;
+            box-shadow: 0px 5px 10px var(--Grayish-Blue);
+            .arrow {
+                width: 50%;
+                background-position: center;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            #prev {
+                opacity: .6;
+                background-image: url("./images/icon-prev.svg");
+            }
+            #next {
+                opacity: .6;
+                background-image: url("./images/icon-next.svg");
+            }
+            #prev:hover,
+            #next:hover {
+                opacity: 1;
+                transition: all .2s ease-in-out;
+            }
+        }
+        img {
+            width: 100%;
+            object-fit: cover;
+            border-radius: 3px;
+        }
+        &::before {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            content: "";
+            display: block;
+            width: 300px;
+            height: 300px;
+            background-image: url("./images/pattern-bg.svg");
+            background-size: 300px 300px;
+            background-position: center;
+            z-index: -999;
+        }
+    }
+    .quote-container {
+        width: 80%;
+        height: auto;
+        text-align: center;
+        padding: 15px;
+        #testimonial {
+            position: relative;
+            color: var(--Dark-Blue);
+            font-weight: 300;
+            margin-bottom: 20px;
+            &::before {
+                position: absolute;
+                left: 50%;
+                top: 0;
+                transform: translate(-50%, -50%);
+                content: "";
+                display: block;
+                width: 50px;
+                height: 50px;
+                background-image: url("./images/pattern-quotes.svg");
+                background-size: 50px 50px;
+                background-position: center;
+                z-index: -999;
+            }
+        }
+        #name {
+            color: var(--Dark-Blue);
+            font-weight: 700;
+        }
+        #rol {
+            color: var(--Grayish-Blue);
+            font-weight: 500;
+        }
+    }
+}
+
+@media (min-width: 700px) {
+    .container {
+        flex-direction: row-reverse;
+        justify-content: center;
+        background-position: left bottom;
+        background-size: 40% 20%;
+        .photo-container {
+            position: relative;
+            padding-top: 35%;
+            padding-left: 35%;
+            border-radius: 3% !important;
+            .controls {
+                left: 10% !important;
+                transform: translateX(-10%) !important;
+                z-index: 999;
+            }
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            &::before {
+                width: 115%;
+                height: 115%;
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+            }
+        }
+        .quote-container {
+            transform: translateX(100px);
+            width: 50% !important;
+            text-align: left !important;
+            #testimonial {
+                font-size: 32px;
+                &::before {
+                    left: 20%;
+                    top: 0;
+                    transform: translate(-20%, -50%);
+                    width: 25%;
+                    height: 40%;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+            }
+            #name,
+            #rol {
+                display: inline-block;
+            }
+        }
+    }
+}

@@ -1,0 +1,208 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  background-repeat: no-repeat;
+}
+
+:root {
+  --Dark-Blue: hsl(240, 38%, 20%);
+  --Grayish-Blue: hsl(240, 18%, 77%);
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url("./images/pattern-curve.svg");
+  background-position: bottom;
+  background-size: 100% 10%;
+}
+
+.container .photo-container {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  margin: 80px 0px;
+  -webkit-box-shadow: 0px 5px 25px var(--Grayish-Blue);
+          box-shadow: 0px 5px 25px var(--Grayish-Blue);
+}
+
+.container .photo-container .controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  left: 50%;
+  top: calc(100% - 20px);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 80px;
+  height: 40px;
+  border-radius: 50px;
+  overflow: hidden;
+  background-color: white;
+  -webkit-box-shadow: 0px 5px 10px var(--Grayish-Blue);
+          box-shadow: 0px 5px 10px var(--Grayish-Blue);
+}
+
+.container .photo-container .controls .arrow {
+  width: 50%;
+  background-position: center;
+}
+
+.container .photo-container .controls .arrow:hover {
+  cursor: pointer;
+}
+
+.container .photo-container .controls #prev {
+  opacity: .6;
+  background-image: url("./images/icon-prev.svg");
+}
+
+.container .photo-container .controls #next {
+  opacity: .6;
+  background-image: url("./images/icon-next.svg");
+}
+
+.container .photo-container .controls #prev:hover,
+.container .photo-container .controls #next:hover {
+  opacity: 1;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.container .photo-container img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 3px;
+}
+
+.container .photo-container::before {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  content: "";
+  display: block;
+  width: 300px;
+  height: 300px;
+  background-image: url("./images/pattern-bg.svg");
+  background-size: 300px 300px;
+  background-position: center;
+  z-index: -999;
+}
+
+.container .quote-container {
+  width: 80%;
+  height: auto;
+  text-align: center;
+  padding: 15px;
+}
+
+.container .quote-container #testimonial {
+  position: relative;
+  color: var(--Dark-Blue);
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.container .quote-container #testimonial::before {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-image: url("./images/pattern-quotes.svg");
+  background-size: 50px 50px;
+  background-position: center;
+  z-index: -999;
+}
+
+.container .quote-container #name {
+  color: var(--Dark-Blue);
+  font-weight: 700;
+}
+
+.container .quote-container #rol {
+  color: var(--Grayish-Blue);
+  font-weight: 500;
+}
+
+@media (min-width: 700px) {
+  .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-position: left bottom;
+    background-size: 40% 20%;
+  }
+  .container .photo-container {
+    position: relative;
+    padding-top: 35%;
+    padding-left: 35%;
+    border-radius: 3% !important;
+  }
+  .container .photo-container .controls {
+    left: 10% !important;
+    -webkit-transform: translateX(-10%) !important;
+            transform: translateX(-10%) !important;
+    z-index: 999;
+  }
+  .container .photo-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .container .photo-container::before {
+    width: 115%;
+    height: 115%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  .container .quote-container {
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+    width: 50% !important;
+    text-align: left !important;
+  }
+  .container .quote-container #testimonial {
+    font-size: 32px;
+  }
+  .container .quote-container #testimonial::before {
+    left: 20%;
+    top: 0;
+    -webkit-transform: translate(-20%, -50%);
+            transform: translate(-20%, -50%);
+    width: 25%;
+    height: 40%;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .container .quote-container #name,
+  .container .quote-container #rol {
+    display: inline-block;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

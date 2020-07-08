@@ -1,0 +1,154 @@
+:root {
+  --Red: hsl(0, 100%, 74%);
+  --Green: hsl(154, 59%, 51%);
+  --Blue: hsl(248, 32%, 49%);
+  --Red-Accent: hsl(0, 100%, 64%);
+  --Green-Accent: rgba(0, 125, 0, 0.3);
+  --Dark-Blue: hsl(249, 10%, 26%);
+  --Grayish-Blue: hsl(246, 25%, 77%);
+  --Grey-Shadow: rgba(0, 0, 0, 0.2);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+body {
+  background-color: var(--Red);
+}
+
+body .container {
+  height: 100vh;
+  width: 100vw;
+  background: url("./images/bg-intro-desktop.png");
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 25px 100px;
+}
+
+body .container .copy {
+  -webkit-box-flex: 0.5;
+      -ms-flex: 0.5;
+          flex: 0.5;
+  padding-right: 50px;
+}
+
+body .container .copy h2 {
+  font-size: 3rem;
+  line-height: 1;
+  margin-bottom: 25px;
+}
+
+body .container .right-section {
+  -webkit-box-flex: 0.5;
+      -ms-flex: 0.5;
+          flex: 0.5;
+  padding: 20px;
+}
+
+body .container .right-section .copy-try-free {
+  width: 100%;
+  height: auto;
+  background-color: var(--Blue);
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  padding: 20px 10px;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 0 7px var(--Grey-Shadow);
+          box-shadow: 0 7px var(--Grey-Shadow);
+}
+
+body .container .right-section .copy-try-free .bold-text {
+  font-weight: 600;
+}
+
+body .container .right-section form {
+  background-color: white;
+  border-radius: 10px;
+  padding: 40px;
+  -webkit-box-shadow: 0 7px var(--Grey-Shadow);
+          box-shadow: 0 7px var(--Grey-Shadow);
+}
+
+body .container .right-section form input {
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid var(--Dark-Blue);
+  padding: 0 30px;
+  margin: 10px 0;
+  color: var(--Dark-Blue);
+  font-weight: 600;
+}
+
+body .container .right-section form #button {
+  border: 0;
+  color: white;
+  background-color: var(--Green);
+  text-transform: uppercase;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+body .container .right-section form #button:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0 5px var(--Green-Accent);
+          box-shadow: 0 5px var(--Green-Accent);
+}
+
+body .container .right-section form label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--Grayish-Blue);
+  text-align: center;
+}
+
+body .container .right-section form label span {
+  color: var(--Red);
+}
+
+body .container .right-section form label span:hover {
+  cursor: pointer;
+  color: var(--Red-Accent);
+}
+
+@media (max-width: 700px) {
+  body .container {
+    height: 100%;
+    background: url("./images/bg-intro-mobile.png") !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 40px 0 !important;
+    padding-top: 100px !important;
+  }
+  body .container .copy {
+    padding: 0 25px;
+    text-align: center;
+  }
+  body .container .copy h2 {
+    font-size: 1.5rem !important;
+  }
+  body .container .right-section .copy-try-free {
+    padding: 20px 50px !important;
+  }
+  body .container .right-section form {
+    padding: 20px !important;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
