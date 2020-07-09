@@ -1,0 +1,114 @@
+:root {
+    --Violet: hsl(257, 40%, 49%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    border: 0;
+    outline: 0;
+}
+
+section {
+    min-height: 100vh;
+    width: 100%;
+    background: var(--Violet) url("../images/bg-desktop.svg") no-repeat center center / cover;
+    padding: 50px;
+    .logo {
+        height: 60px;
+        width: 100%;
+        background: url("../images/logo.svg") no-repeat;
+        background-size: auto 80%;
+    }
+    .container {
+        display: flex;
+        // height:
+        height: calc(100vh - 220px);
+        color: white;
+        .illustration {
+            flex: 0.5;
+            width: 100%;
+            background: url("../images/illustration-mockups.svg") no-repeat center center / contain;
+        }
+        .copy {
+            flex: 0.5;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 50px;
+            h1 {
+                font-size: 2rem;
+            }
+            p {
+                margin: 20px 0;
+                font-family: "Open Sans", sans-serif;
+            }
+            button {
+                background: white;
+                color: var(--Violet);
+                height: 50px;
+                width: 160px;
+                padding: 0 32px;
+                border-radius: 50px;
+                font-size: 1.1rem;
+                box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.15);
+                transition: all 0.2s ease-in-out;
+                &:hover {
+                    cursor: pointer;
+                    box-shadow: 0 8px 16px 4px rgba(0, 0, 0, 0.3);
+                }
+            }
+        }
+    }
+    .social-media-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 60px;
+        a {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border: 1px solid white;
+            border-radius: 50%;
+            margin: 0 12px;
+            color: white;
+            transition: all 0.2s ease-in-out;
+            &:hover {
+                color: var(--Violet);
+                background: white;
+            }
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    section {
+        padding: 50px 25px;
+        background: var(--Violet) url("../images/bg-mobile.svg") no-repeat top center / contain;
+        .logo {
+            background-size: 40% auto;
+        }
+        .container {
+            flex-direction: column;
+            text-align: center;
+            margin-bottom: 50px;
+            .copy {
+                margin-top: 50px;
+                padding: 0;
+                h1 {
+                    font-size: 1.4rem;
+                }
+                button {
+                    align-self: center;
+                }
+            }
+        }
+        .social-media-container {
+            justify-content: center;
+        }
+    }
+}
