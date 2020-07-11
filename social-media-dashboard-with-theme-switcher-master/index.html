@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <link rel="stylesheet" href="./styles/styles.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>Frontend Mentor | [Challenge Name Here]</title>
+
+</head>
+
+<body>
+
+    <script src="./app.js"></script>
+
+    <header>
+        <div class="titles">
+            <h1>Social Media Dashboard</h1>
+            <p>Total Followers: 23,004</p>
+        </div>
+        <div class="toggle">
+            <p>Dark Mode</p>
+            <div class="switch-container" onclick="themeToogle()">
+                <div id="indicator"></div>
+            </div>
+        </div>
+    </header>
+
+
+    <section>
+
+        <!-- Facebook -->
+        <div class="card">
+            <div class="top">
+                <img src="./images/icon-facebook.svg" alt="Facebook">
+                <p>@nathanf</p>
+            </div>
+            <div class="followers">1987</div>
+            <div class="copy-followers">Followers</div>
+            <div class="stast up">12 Today</div>
+        </div>
+
+        <!-- Twitter -->
+        <div class="card">
+            <div class="top">
+                <img src="./images/icon-twitter.svg" alt="">
+                <p>@nathanf</p>
+            </div>
+            <div class="followers">1044</div>
+            <div class="copy-followers">Followers</div>
+            <div class="stast up">99 Today</div>
+        </div>
+
+        <!-- Instagram -->
+        <div class="card">
+            <div class="top">
+                <img src="./images/icon-instagram.svg" alt="Instagram">
+                <p>@realnathanf</p>
+            </div>
+            <div class="followers">11k</div>
+            <div class="copy-followers">Followers</div>
+            <div class="stast up">1099 Today</div>
+        </div>
+
+        <!-- Youtube -->
+        <div class="card">
+            <div class="top">
+                <img src="./images/icon-youtube.svg" alt="Youtube">
+                <p>Nathan F.</p>
+            </div>
+            <div class="followers">8239</div>
+            <div class="copy-followers">Subscribers</div>
+            <div class="stast down">144 Today</div>
+        </div>
+
+    </section>
+
+    <h2>Overview - Today</h2>
+
+    <section>
+
+        <!-- Facebook Views -->
+        <div class="card-overview">
+            <div class="top">
+                <p>Page Views</p>
+                <div class="icon">
+                    <img src="./images/icon-facebook.svg" alt="Facebook">
+                </div>
+            </div>
+            <div class="bottom-overview">
+                <h3>87</h3>
+                <div class="stast up">3%</div>
+            </div>
+        </div>
+
+        <!-- Facebook Likes -->
+        <div class="card-overview">
+            <div class="top">
+                <p>Likes</p>
+                <div class="icon">
+                    <img src="./images/icon-facebook.svg" alt="Facebook">
+                </div>
+            </div>
+            <div class="bottom-overview">
+                <h3>52</h3>
+                <div class="stast down">2%</div>
+            </div>
+        </div>
+
+        <!-- Instagram Likes -->
+        <div class="card-overview">
+            <div class="top">
+                <p>Likes</p>
+                <div class="icon">
+                    <img src="./images/icon-instagram.svg" alt="Instagram">
+                </div>
+            </div>
+            <div class="bottom-overview">
+                <h3>5462</h3>
+                <div class="stast up">2257%</div>
+            </div>
+        </div>
+
+        <!-- Instagram Views -->
+        <div class="card-overview">
+            <div class="top">
+                <p>Profile Views</p>
+                <div class="icon">
+                    <img src="./images/icon-instagram.svg" alt="Instagram">
+                </div>
+            </div>
+            <div class="bottom-overview">
+                <h3>52k</h3>
+                <div class="stast up">1375%</div>
+            </div>
+        </div>
+
+        <!-- Retweets -->
+        <div class="card-overview">
+            <div class="top">
+                <p>Retweets</p>
+                <div class="icon">
+                    <img src="./images/icon-twitter.svg" alt="Twitter">
+                </div>
+            </div>
+            <div class="bottom-overview">
+                <h3>117</h3>
+                <div class="stast up">303%</div>
+            </div>
+        </div>
+
+        <!-- Twitter Likes -->
+        <div class="card-overview">
+            <div class="top">
+                <p>Likes</p>
+                <div class="icon">
+                    <img src="./images/icon-twitter.svg" alt="Twitter">
+                </div>
+            </div>
+            <div class="bottom-overview">
+                <h3>507</h3>
+                <div class="stast up">553%</div>
+            </div>
+        </div>
+
+        <!-- Youtube Likes -->
+        <div class="card-overview">
+            <div class="top">
+                <p>Likes</p>
+                <div class="icon">
+                    <img src="./images/icon-youtube.svg" alt="Youtube">
+                </div>
+            </div>
+            <div class="bottom-overview">
+                <h3>107</h3>
+                <div class="stast down">19%</div>
+            </div>
+        </div>
+
+        <!-- Youtube Views -->
+        <div class="card-overview">
+            <div class="top">
+                <p>Total Views</p>
+                <div class="icon">
+                    <img src="./images/icon-youtube.svg" alt="Youtube">
+                </div>
+            </div>
+            <div class="bottom-overview">
+                <h3>1407</h3>
+                <div class="stast down">12%</div>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+
+</html>
