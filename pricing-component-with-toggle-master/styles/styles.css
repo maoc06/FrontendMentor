@@ -1,0 +1,211 @@
+:root {
+  --Linear-Gradient: linear-gradient( to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  --Very-Light-Grayish-Blue: hsl(240, 78%, 98%);
+  --Light-Grayish-Blue: hsl(234, 14%, 74%);
+  --Grayish-Blue: hsl(233, 13%, 49%);
+  --Dark-Grayish-Blue: hsl(232, 13%, 33%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+h1 {
+  color: var(--Grayish-Blue);
+}
+
+h4,
+section {
+  color: var(--Light-Grayish-Blue);
+}
+
+span {
+  color: var(--Dark-Grayish-Blue);
+  font-size: 3.2rem;
+  margin: 20px;
+}
+
+button {
+  width: 100%;
+  height: 50px;
+  padding: 0 32px;
+  border-radius: 8px;
+  border: 0;
+  color: var(--Very-Light-Grayish-Blue);
+  background: var(--Linear-Gradient);
+  text-transform: uppercase;
+  margin-top: 32px;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+button:hover {
+  cursor: pointer;
+  background: white;
+  color: var(--Grayish-Blue);
+  border: 1px solid var(--Grayish-Blue);
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+  background-color: var(--Very-Light-Grayish-Blue);
+}
+
+@media (min-width: 900px) {
+  body {
+    background-image: url("../images/bg-top.svg"), url("../images/bg-bottom.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: right top, left bottom;
+    background-size: 25% 80%, 25% 40%;
+  }
+}
+
+@media (max-width: 900px) {
+  body {
+    background: var(--Very-Light-Grayish-Blue) url("../images/bg-top.svg") no-repeat right top/50% 30%;
+  }
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 32px 0;
+}
+
+header section .toggle {
+  width: 60px;
+  height: 32px;
+  background: var(--Linear-Gradient);
+  border-radius: 50px;
+  padding: 4px;
+  margin: 0 15px;
+}
+
+header section .toggle #switch {
+  height: 24px;
+  width: 24px;
+  background: white;
+  border-radius: 50%;
+  -webkit-transform: translateX(28px);
+          transform: translateX(28px);
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+
+header section .toggle:hover {
+  cursor: pointer;
+  background: var(--Grayish-Blue);
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(325px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+  row-gap: 32px;
+  padding: 0 132px;
+}
+
+@media (max-width: 700px) {
+  main {
+    padding: 0 32px;
+  }
+}
+
+main .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: white;
+  border-radius: 12px;
+  min-height: 350px;
+  padding: 32px;
+  margin: 25px 0;
+}
+
+main .card section {
+  width: 100%;
+  padding: 15px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+main .card section:last-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 700px) {
+  main .card:last-child {
+    margin-bottom: 32px;
+  }
+}
+
+main .middle {
+  background: var(--Linear-Gradient);
+  margin: 0;
+  padding: calc(25px + 32px) 32px;
+}
+
+main .middle h4,
+main .middle span,
+main .middle section {
+  color: white;
+}
+
+main .middle button {
+  background: white;
+  color: var(--Grayish-Blue);
+}
+
+main .middle button:hover {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+}
+
+main .middle section {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+main .middle section:last-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+/*# sourceMappingURL=styles.css.map */
